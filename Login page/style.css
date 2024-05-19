@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: #081b29;
+  background-image: url('C:\Users\ASUS\Downloads\undraw_Mailbox_re_dvds.pngs');
+  background-size: cover;
+  background-position: center;
+
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.logo{
+   position: relative;
+    top: 0;
+    left: 0;
+    font-size: 25px;font-weight: 600;
+    color: azure;
+    text-decoration: none;
+    
+    
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+
+.navber a{
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    color: azure;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: .3s;
+    z-index: 1;
+}
+
+
+
+.navber a:hover,
+.navber a.active {
+    color: #00abf0;
+
+}
+
+.navber a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid #00abf0;
+    width: 0;
+    height: 100%;
+    
+    z-index: -1;
+    transition: .4s;
+}
+.navber a:hover::before{
+    width: 100%;
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  padding: 10px 10%;
+}
+
+
+.title{
+    max-width: 600px;
+    height: 250px;
+    
+
+}
+
+.title h2{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #ededed;
+
+}
+
+.title h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .5s;
+}
+
+.title h3{
+    position: relative;
+    font-size: 25px;
+    font-weight: 500;
+    color: #00abf0;
+    padding: 10px 0 10px ;
+}
+
+.title h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .8s;
+}
+
+.title p{
+    position: relative;
+    font-size: 20px;
+    color: #ededed;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.title p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+
+width: 350px;
+height: 50px;
+
+margin: 30px 10px 0;
+
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+    z-index: 2;
+}
+.btn a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    color: #00abf0;
+    text-decoration: none;
+    border: 2px solid #00abf0 ;
+    border-radius: 10px;
+    background-color: #081b29;
+z-index: 1;
+overflow: hidden;
+transition: .4s;
+}
+
+.btn a:hover{
+    color: #081b29;
+}
+
+.btn a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #00abf0;
+    z-index: -1;
+    transition: .4s;
+}
+
+.btn a:hover::before
+{
+    width: 100%;
+}
+
+
+.form{
+    width: 250px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(10px);
+   position: absolute;
+    top: 25%;
+    left: 70%;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: #ededed;
+    width: 200px;
+    height: 40px;
+    background-color: #00abf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.form input{
+    width: 200px;
+    height: 35px;
+    padding: 5px;
+   background-color: transparent;
+   border-bottom: 2px solid #00abf0;
+   border-top:none;
+   border-left: none;
+   border-right: none;
+   font-size: 17px;
+   color: #ededed;
+   margin-top: 20px;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+.form p{
+    font-size: 17px;
+    text-align: center;
+    color: #ededed;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.form a{
+    text-decoration: none;
+}
+
+span{
+    color: #00abf0;
+    text-decoration: none;
+}
+
+.form button{
+    position: relative;
+    width: 200px;
+    height: 40px;
+    background-color: #081b29;
+    border: 2px solid #00abf0;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+}
+.form button:hover{
+color: #081b29;
+}
+
+button a{
+    font-size: 18px;
+    color: #00abf0;
+    text-decoration: none;
+
+}
+
+.form button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ededed;
+    z-index: -1;
+    transition: .4s;
+}
+
+.form button:hover::before{
+    width: 100%;
+}
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
+
+.home-sym{
+    position: relative;
+    position: absolute;
+    bottom: 40px;
+  width: 170px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sym::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.home-sym a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sym a:hover{
+    color: #081b29;
+}
+
+.home-sym a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sym a:hover::before {
+    width: 100%;
+}
+
+
+
